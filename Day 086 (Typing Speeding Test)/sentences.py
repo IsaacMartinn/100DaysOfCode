@@ -1,0 +1,22 @@
+easy_mode_sentences = [
+    "The quick brown fox jumps over the lazy dog every single morning.",
+    "Learning to type faster can help improve productivity and efficiency.",
+    "Reading books is a wonderful way to explore different worlds and ideas.",
+    "Consistency and practice are key factors in developing any new skill.",
+    "On a clear night, the stars twinkle brightly in the vast open sky.",
+    "Laughter and joy are two of the most beautiful expressions in life.",
+    "Being kind to others can make the world a much better place to live.",
+    "Hard work and dedication often lead to success and personal growth.",
+    "Rainy days are perfect for staying inside and watching a favorite movie.",
+    "Sometimes, life brings unexpected surprises that change everything.",
+    "Finding happiness in small things can make each day feel more meaningful.",
+    "Music has the power to lift spirits and bring people together.",
+    "Taking a deep breath can help calm the mind and reduce stress.",
+    "Exploring nature allows us to see the beauty of the world around us.",
+    "Good communication skills are essential for building strong relationships.",
+    "Each challenge in life is an opportunity to learn and grow stronger.",
+    "Setting goals can provide direction and motivation for the future.",
+    "Exercise is not only good for the body but also for the mind.",
+    "Creativity and imagination can bring color and excitement to everyday life.",
+    "The journey of a thousand miles begins with a single step forward."
+]
