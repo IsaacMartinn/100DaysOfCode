@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Restaurants{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>All Cafes</h1>
+        <table class="table table-dark table-striped table-hover">
+            <div class ='container'>
+                <div class="row">
+                    <div class="col">Cafe Name</div>
+                    <div class="col">Cafe Location</div>
+                    <div class="col">Image</div>
+                    <div class="col">Location</div>
+                    <div class="col">Total Seats</div>
+                    <div class="col">Has Toilets</div>
+                    <div class="col">Has Wifi</div>
+                    <div class="col">Has Sockets</div>
+                    <div class="col">Can Take Calls</div>
+                    <div class="col">Coffee Price</div>
+                </div>
+            </div>
+
+        </table>
+
+      {% for cafe in cafes: %}
+
+	  <table class="table table-dark table-striped table-hover">
+      <div class="container">
+          <div class="row">
+              <div class="col"> {{ cafe['name'] }}</div>
+              <div class="col"> <a href= "{{ cafe['map_url'] }}" > Maps Link </a></div>
+              <div class="col"><img src="{{ cafe['img_url'] }}" width="70" height="70"> </div>
+              <div class="col"> {{ cafe['location']}}</div>
+              <div class="col"> {{ cafe['seats']}}</div>
+              <div class="col"> {{ cafe['has_toilets']}}</div>
+              <div class="col"> {{ cafe['has_wifi']}}</div>
+              <div class="col"> {{ cafe['has_sockets']}}</div>
+              <div class="col"> {{ cafe['can_take_calls']}}</div>
+              <div class="col"> {{ cafe['coffee_price']}}</div>
+          </div>
+      </div>
+
+  	  </table>
+      {% endfor %}
+
+      <p><a href="{{ url_for('home')}}">Return to index page</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
