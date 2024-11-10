@@ -1,0 +1,84 @@
+/* Centering the .container div */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #90D5FF; /* Keeps your background color */
+}
+
+.container {
+    border-radius: 25px;
+    background: white;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow for better visibility */
+    text-align: center;
+}
+
+.button {
+    background-color: blue; /* Keeps the button color */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+#todo-text{
+    height: 30px;
+    width: 300px;
+    font-size: 14pt;
+}
+
+.line{
+    width: 450px;
+}
+
+.flex-container {
+  display: flex;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-content: space-between;
+}
+.todo-items{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: flex-end;
+
+}
+
+label{
+    font-size:20px;
+    margin-left: 10px;
+}
+
+.todo-items {
+    text-align: left; /* Ensures everything inside is aligned to the left */
+    padding-left: 30px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.task-checkbox {
+    margin-right: 10px;
+}
+
+.task-label {
+    font-size: 18px;
+}
+
+#delete-button{
+    background-color: red;
+}

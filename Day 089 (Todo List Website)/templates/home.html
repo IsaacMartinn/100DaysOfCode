@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>TO-DO LIST</h1>
+    <form action="{{ url_for('add_task') }}" method="post">
+        <input type="text" id="todo-text" name="task" placeholder="Add a new todo">
+        <button class='button' type="submit">Add</button>
+    </form>
+
+    {% for task in all_tasks %}
+    <div class="todo-items">
+        <form>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> {{ task.task}}</label><br>
+        </form>
+    </div>
+    {% endfor %}
+
+
+
+
+
+    <hr class="line" />
+    <form action="{{ url_for('delete_all') }}" method="post">
+        <div class="flex-container">
+            <div id="left">{{ number_of_tasks }} total tasks </div>
+            <div id="right"><button class='button' id="delete-button" type="submit">Delete All</button></div>
+        </div>
+    </form>
+
+
+
+</div>
+
+</body>
+</html>
