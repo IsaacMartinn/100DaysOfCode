@@ -3,37 +3,9 @@ import random
 HANGMANPICS = [r'''
   +---+
   |   |
-      |
-      |
-      |
-      |
-=========''', r'''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''', r'''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========''', r'''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', r'''
-  +---+
-  |   |
   O   |
  /|\  |
-      |
+ / \  |
       |
 =========''', r'''
   +---+
@@ -47,9 +19,38 @@ HANGMANPICS = [r'''
   |   |
   O   |
  /|\  |
- / \  |
+      |
+      |
+=========''', r'''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', r'''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', r'''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', r'''
+  +---+
+  |   |
+      |
+      |
+      |
       |
 =========''']
+
 
 #1. set a variable called 'lives' to keep track of the number of lives left
 #set lives to equal 6
@@ -85,17 +86,27 @@ while game_on:
     display = ""
 
     for letter in chosen_word:
-        if letter == guess or letter in correct_letters:
-            display += letter + " "
+        if letter == guess:
+          display += letter
+          correct_letters.append(guess)
+        elif letter in correct_letters:
+          display += letter
         else:
-            display += "_ "
+           display += "_"
+
+    print(display)
+
+    if guess not in chosen_word:
+       lives -=1
+       if lives == 0:
+          game_on = False
+          print("You lose")
+
+
+
+    if "_" not in display: 
+       game_on = False
+       print("You win!")
+
+    print(HANGMANPICS[lives])
         
-
-    if guess in chosen_word and guess not in correct_letters:
-        correct_letters.append(guess)
-
-    print(display.strip())
-
-    if "_" not in display:
-        game_on = False
-        print("You win!")
