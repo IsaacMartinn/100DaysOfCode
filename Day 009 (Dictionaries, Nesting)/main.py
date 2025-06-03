@@ -1,4 +1,4 @@
-
+#BLIND AUCTION FINAL PROJECT
 bid_on = True
 auction_dict = {}
 
@@ -22,3 +22,4 @@ while bid_on:
         print(f"The winner is {result_name[0]} with a bid of ${highest_bid}")
 
 
+#just need to finish project by making it clear the screen when new person enters bid
