@@ -28,7 +28,7 @@ will_rain = False
 
 for hour_data in weather_data["list"][:4]:
     condition_code = hour_data["weather"][0]["id"]
-    if int(condition_code) < 700:
+    if int(condition_code) >= 700:
         will_rain = True
 if will_rain: 
 
@@ -36,7 +36,7 @@ if will_rain:
 
     message = client.messages.create(
         from_="+16893145936",   
-        to="+14168852667",      
+        to=os.getenv("my_phone_num"),      
         body="It's going to rain todayxdxd"
     )
     print("Status:", message.status)
