@@ -1,0 +1,20 @@
+*{
+    background-color: black;;
+}
+
+h1, p{
+    color:white;
+    text-align: center;
+}
+
+img{
+    border: 2px solid white;
+}
+
+#image{
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+
+}
+
